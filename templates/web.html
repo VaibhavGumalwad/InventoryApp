@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Inventory</title></head>
+<body>
+    <h1>Inventory</h1>
+    <form method="POST" action="/add">
+        Item: <input type="text" name="name" required>
+        Quantity: <input type="number" name="quantity" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for item in items %}
+            <li>{{ item[1] }} - {{ item[2] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
