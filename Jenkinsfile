@@ -1,4 +1,4 @@
-pipeline {
+peline {
     agent any
 
     environment {
@@ -7,11 +7,7 @@ pipeline {
     }
 
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/VaibhavGumalwad/InventoryApp.git'
-            }
-        }
+       
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
