@@ -7,10 +7,12 @@ pipeline {
     }
 
     stages {
-        steps {
+        stage('Clone'){
+            steps {
                 git branch: 'main',
                     url: 'https://github.com/VaibhavGumalwad/InventoryApp.git'
             }
+        }
         stage('Install Dependencies') {
             steps {
                 sh 'pip install -r requirements.txt'
