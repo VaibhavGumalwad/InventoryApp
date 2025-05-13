@@ -13,9 +13,8 @@ pipeline {
     steps {
         sh '''
             bash -c "
-                sudo apt-get update &&
-                sudo apt-get install -y sqlite3 libsqlite3-dev
-            "
+                sudo apt update &&
+                sudo apt install -y sqlite3 libsqlite3-dev"
         '''
     }
 }
