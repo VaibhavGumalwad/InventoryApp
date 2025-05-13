@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "inventoryapp"
         CONTAINER_NAME = "inventoryapp-container"
-        PORT = "5000"
+        PORT = "8000"
     }
 
     stages {
