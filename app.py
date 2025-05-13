@@ -25,7 +25,7 @@ def add():
     name = request.form['name']
     quantity = int(request.form['quantity'])
     with sqlite3.connect(DB) as conn:
-        conn.execute('INSERT INTO inventory (name, quantity) VALUES (name, quantity)')
+        conn.execute('INSERT INTO inventory (name, quantity) VALUES (?,?)',(name, int(quantity)))
     return redirect('/')
 
 if __name__ == "__main__":
