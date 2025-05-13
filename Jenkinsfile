@@ -12,7 +12,6 @@ pipeline {
       stage('Install SQLite3') {
     steps {
         sh '''
-            sudo -S apt update &&
             sudo -S apt install -y sqlite3 libsqlite3-dev
         '''
     }
