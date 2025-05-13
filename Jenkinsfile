@@ -42,7 +42,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                sh "docker run -d -p ${PORT}:5000 --name ${CONTAINER_NAME} ${IMAGE_NAME}"
+                sh "docker run -d -p ${PORT}:8000 --name ${CONTAINER_NAME} ${IMAGE_NAME}"
             }
         }
     }
