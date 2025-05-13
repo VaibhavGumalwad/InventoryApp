@@ -6,6 +6,14 @@ pipeline {
         CONTAINER_NAME = "inventoryapp-container"
         PORT = "8000"
     }
+     stage('Install SQLite3') {
+            steps {
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y sqlite3 libsqlite3-dev
+                '''
+            }
+        }
 
     stages {
         stage('Clone Repository') {
