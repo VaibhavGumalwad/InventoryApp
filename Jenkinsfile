@@ -6,7 +6,10 @@ pipeline {
         CONTAINER_NAME = "inventoryapp-container"
         PORT = "8000"
     }
-     stage('Install SQLite3') {
+     
+
+    stages {
+        stage('Install SQLite3') {
             steps {
                 sh '''
                     sudo apt-get update
@@ -14,8 +17,6 @@ pipeline {
                 '''
             }
         }
-
-    stages {
         stage('Clone Repository') {
             steps {
                 git url: 'https://github.com/VaibhavGumalwad/InventoryApp.git'
