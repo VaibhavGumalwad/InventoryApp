@@ -9,13 +9,7 @@ pipeline {
      
 
     stages {
-      stage('Install SQLite3') {
-    steps {
-        sh '''
-            sudo -S apt install -y sqlite3 libsqlite3-dev
-        '''
-    }
-}
+   
 
         stage('Clone Repository') {
             steps {
