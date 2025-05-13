@@ -9,15 +9,15 @@ pipeline {
      
 
     stages {
-       stage('Install SQLite3') {
+      stage('Install SQLite3') {
     steps {
         sh '''
-            bash -c "
-                sudo apt update &&
-                sudo apt install -y sqlite3 libsqlite3-dev"
+            sudo -S apt update &&
+            sudo -S apt install -y sqlite3 libsqlite3-dev
         '''
     }
 }
+
         stage('Clone Repository') {
             steps {
                 git url: 'https://github.com/VaibhavGumalwad/InventoryApp.git'
